@@ -126,17 +126,93 @@ rocket-decals/
 
 ## 🌐 Déploiement
 
-### Vercel (Recommandé)
+### GitHub Pages (Actuel)
+
+Le site est déployé automatiquement sur **GitHub Pages** avec une configuration Next.js en mode **export statique**.
+
+#### Configuration Actuelle
+
+Le projet est configuré pour générer un site statique :
+
+```javascript
+// next.config.js
+{
+  output: 'export',  // Export statique pour GitHub Pages
+  images: {
+    unoptimized: true  // Images non optimisées (requis pour export)
+  }
+}
+```
+
+#### Déploiement Automatique
+
+```bash
+# Build et déploiement en une commande
+npm run deploy
+```
+
+Cette commande :
+1. ✅ Build le projet Next.js (`next build`)
+2. ✅ Génère le dossier `out/` avec le site statique
+3. ✅ Déploie automatiquement sur la branche `gh-pages`
+4. ✅ Le site est accessible via GitHub Pages
+
+#### Configuration GitHub Pages
+
+Dans les paramètres du repository GitHub :
+- **Settings** → **Pages**
+- **Source** : Deploy from a branch
+- **Branch** : `gh-pages` / `root`
+- **Custom domain** : `rocket-decals.com` (configuré via fichier `CNAME`)
+
+#### Déploiement Manuel
+
+```bash
+# 1. Build du projet
+npm run build
+
+# 2. Le dossier out/ contient le site statique
+# 3. Déployer avec gh-pages
+npm run deploy
+```
+
+### Domaine Personnalisé
+
+Le site utilise un domaine personnalisé `rocket-decals.com` :
+
+#### Configuration DNS
+
+Chez votre fournisseur DNS, créez un enregistrement **CNAME** :
+
+```
+CNAME    rocket-decals.com    →    votre-username.github.io
+```
+
+Ou pour un sous-domaine :
+
+```
+CNAME    www    →    votre-username.github.io
+```
+
+#### Fichier CNAME
+
+Le fichier `public/CNAME` contient le domaine :
+
+```
+rocket-decals.com
+```
+
+⚠️ **Important** : Ce fichier est copié automatiquement dans `out/` lors du build et est nécessaire pour que GitHub Pages reconnaisse le domaine personnalisé.
+
+### Alternative : Vercel
+
+Pour migrer vers Vercel :
 
 ```bash
 npm i -g vercel
 vercel
-```
 
-### Variables d'Environnement
-
-```env
-NEXT_PUBLIC_SITE_URL=https://rocket-decals.com
+# Modifier next.config.js : retirer "output: 'export'"
 ```
 
 ---
@@ -223,20 +299,23 @@ export const translations = {
 
 ```bash
 # Développement
-npm run dev
+npm run dev                    # Lance le serveur de dev (http://localhost:3000)
 
 # Build production
-npm run build
+npm run build                  # Build optimisé → génère le dossier out/
 
-# Démarrer production
-npm start
+# Export statique
+npm run export                 # Alias de build (pour GitHub Pages)
+
+# Déploiement
+npm run deploy                 # Build + déploiement automatique sur GitHub Pages
 
 # Linter
-npm run lint
+npm run lint                   # Vérification ESLint
 
 # Clean
-rm -rf .next node_modules
-npm install
+rm -rf .next out node_modules  # Nettoyage complet
+npm install                    # Réinstallation des dépendances
 ```
 
 ---
@@ -248,7 +327,8 @@ npm install
 {
   "next": "^14.2.0",
   "react": "^18.3.0",
-  "react-dom": "^18.3.0"
+  "react-dom": "^18.3.0",
+  "aos": "^2.3.4"
 }
 ```
 
@@ -257,39 +337,93 @@ npm install
 {
   "typescript": "^5.0.0",
   "@types/react": "^18.3.0",
-  "@types/node": "^20.0.0"
+  "@types/node": "^20.0.0",
+  "gh-pages": "^6.3.0"
 }
 ```
 
+### Scripts Disponibles
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Lance le serveur de développement |
+| `npm run build` | Build de production → génère `out/` |
+| `npm run export` | Alias de build (export statique) |
+| `npm run deploy` | Build + déploiement sur GitHub Pages |
+| `npm run lint` | Vérification ESLint |
+
 ---
 
-## 🌐 Déploiement en Production
+## 🚀 Workflow de Développement
 
-### Option 1 : Vercel (Recommandé)
-
-Le déploiement sur Vercel est automatique avec GitHub :
-
-1. Connectez votre repo GitHub à Vercel
-2. Vercel détecte automatiquement Next.js
-3. Le site est déployé à chaque push sur `main`
+### 1. Développement Local
 
 ```bash
-# Ou en CLI
-npm i -g vercel
-vercel
+# Cloner le repo
+git clone https://github.com/votre-username/rocket-decals.git
+cd rocket-decals
+
+# Installer les dépendances
+npm install
+
+# Lancer en mode dev
+npm run dev
 ```
 
-### Option 2 : Build Manuel
+### 2. Modifications
+
+- Modifier les composants dans `components/`
+- Ajouter des décals dans `data/`
+- Modifier les styles dans `app/globals.css`
+- Tester localement sur `http://localhost:3000`
+
+### 3. Déploiement en Production
 
 ```bash
-# Build de production
-npm run build
+# Commit et push des changements
+git add .
+git commit -m "Description des changements"
+git push origin main
 
-# Démarrer en production (port 3000)
-npm start
+# Déploiement sur GitHub Pages
+npm run deploy
 ```
 
-Le build génère un dossier `.next/` optimisé.
+Le site sera accessible sur `https://rocket-decals.com` après ~1-2 minutes.
+
+### 4. Structure des Branches
+
+- **`main`** : Code source et développement
+- **`gh-pages`** : Site statique généré (créé automatiquement par `gh-pages`)
+
+### 5. Vérification du Déploiement
+
+Après le déploiement, vérifiez :
+
+1. ✅ Actions GitHub : Vérifier que le workflow s'est exécuté sans erreur
+2. ✅ Branche `gh-pages` : Vérifier que les fichiers sont bien dans `out/`
+3. ✅ GitHub Pages : Settings → Pages → Site actif
+4. ✅ Domaine : `https://rocket-decals.com` fonctionne
+5. ✅ HTTPS : Certificat SSL activé automatiquement
+
+### 6. Troubleshooting
+
+**Problème : Le site ne se met pas à jour**
+```bash
+# Vider le cache et redéployer
+rm -rf .next out
+npm run deploy
+```
+
+**Problème : 404 sur GitHub Pages**
+- Vérifier que la branche `gh-pages` existe
+- Vérifier Settings → Pages → Branch = `gh-pages`
+- Attendre 1-2 minutes pour la propagation
+
+**Problème : Domaine personnalisé ne fonctionne pas**
+- Vérifier le fichier `public/CNAME`
+- Vérifier la configuration DNS (propagation peut prendre 24h)
+- Vérifier Settings → Pages → Custom domain
 
 ---
 
