@@ -3,8 +3,21 @@ import { ClientDecal } from '@/types';
 
 export const clients: ClientDecal[] = [
   {
-    id: 'darkau',
+    id: 'nexta',
     new: true,
+    title: {
+      fr: 'Nexta',
+      en: 'Nexta',
+    },
+    keywords: ['nexta', 'rocket league', 'stickers', 'custom', 'decal'],
+    images: [
+      '/img/decals/nexta/nexta-1.png',
+      '/img/decals/nexta/nexta-3.png',
+      '/img/decals/nexta/nexta-2.png',
+    ],
+  },
+  {
+    id: 'darkau',
     title: {
       fr: 'Darkau',
       en: 'Darkau',
@@ -18,7 +31,6 @@ export const clients: ClientDecal[] = [
   },
   {
     id: 'spirit',
-    new: true,
     title: {
       fr: 'Spirit',
       en: 'Spirit',
