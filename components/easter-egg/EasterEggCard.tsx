@@ -119,7 +119,7 @@ export default function EasterEggCard({ card, onClose, colors }: EasterEggCardPr
         >
           <div
             style={{
-              backgroundImage: 'url(/img/logo.webp)',
+              backgroundImage: 'url(/img/logo.png)',
               backgroundSize: '60px 60px',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',

@@ -61,7 +61,7 @@ export default function Navbar() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 id="brand-logo"
-                src="/img/logo.webp"
+                src="/img/logo.png"
                 alt="Logo"
                 width={75}
                 height={75}

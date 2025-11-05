@@ -34,7 +34,7 @@ export default function OptimizedImage({
       return (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={src || '/img/logo.webp'}
+          src={src || '/img/logo.png'}
           alt={alt}
           className={className}
           style={{ ...style, width: '100%', height: '100%', objectFit: 'cover' }}

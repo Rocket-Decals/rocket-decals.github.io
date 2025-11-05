@@ -25,14 +25,14 @@ export default function TutorialSection() {
             </a>
           </p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img/tuto/alphaconsole.webp" alt="AlphaConsole" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
+          <img src="/img/tuto/alphaconsole.png" alt="AlphaConsole" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
 
         <div className="tuto-cards">
           <h3>{t('tutorial.step2.title')}</h3>
           <p>{t('tutorial.step2.text1')}</p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img/tuto/bakkes.webp" alt="BakkesMod" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
+          <img src="/img/tuto/bakkes.png" alt="BakkesMod" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
           <p>{t('tutorial.step2.text2')}</p>
         </div>
 
@@ -41,14 +41,14 @@ export default function TutorialSection() {
           <p>{t('tutorial.step3.text1')}</p>
           <p>{t('tutorial.step3.text2')}</p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img/tuto/cosmetics.webp" alt="Cosmetics" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
+          <img src="/img/tuto/cosmetics.png" alt="Cosmetics" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
 
         <div className="tuto-cards">
           <h3>{t('tutorial.step4.title')}</h3>
           <p>{t('tutorial.step4.text')}</p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img/tuto/items.webp" alt="Items" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
+          <img src="/img/tuto/items.png" alt="Items" loading="lazy" width="800" height="600" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
       </div>
     </div>
