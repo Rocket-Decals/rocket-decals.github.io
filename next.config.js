@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig = {
   // Export as static site for GitHub Pages
   output: 'export',
-  
-  // Base path for GitHub Pages deployment at erlow38.github.io/next-app
-  // Only apply basePath in production (not in local dev)
-  basePath: isProd ? '/next-app' : '',
   
   // Optimize images
   images: {
