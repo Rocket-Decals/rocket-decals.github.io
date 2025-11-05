@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Export as static site for GitHub Pages
+  output: 'export',
+  
+  // Base path for GitHub Pages deployment at erlow38.github.io/next-app
+  basePath: '/next-app',
+  
   // Optimize images
   images: {
+    unoptimized: true, // Required for static export
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -15,7 +22,7 @@ const nextConfig = {
   reactStrictMode: true,
   
   // Keep trailing slashes for compatibility
-  trailingSlash: false,
+  trailingSlash: true,
   
   // Webpack config for video files
   webpack: (config) => {
