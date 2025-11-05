@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build",
-    "deploy": "gh-pages -d out -t true"
+    "deploy": "next build && gh-pages -d out -t"
   },
   "dependencies": {
     "aos": "^2.3.4",
