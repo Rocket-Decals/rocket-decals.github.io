@@ -2782,6 +2782,14 @@ body.easter-egg-open {
 
 /* Responsive design - Harmonisé avec les autres modals */
 @media (max-width: 1400px) {
+    .collection-btn {
+        display: none !important;
+    }
+    
+    .collection-modal {
+        display: none !important;
+    }
+    
     .collection-content {
         max-width: 100%;
         width: calc(100% - 24px);

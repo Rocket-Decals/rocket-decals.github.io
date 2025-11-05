@@ -16,7 +16,7 @@ export default function Navbar() {
           const collectionStr = localStorage.getItem('easterEggCollection');
           if (collectionStr) {
             const collection = JSON.parse(collectionStr);
-            setShowCollection(collection.length > 0 && window.innerWidth >= 768);
+            setShowCollection(collection.length > 0 && window.innerWidth >= 1400);
           }
         } catch (e) {
           setShowCollection(false);
