@@ -65,6 +65,9 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             src={img}
             alt={`${alt} ${idx + 1}`}
             className={`carousel-slide ${idx === currentSlide ? 'active' : ''}`}
+            loading={idx === 0 ? 'eager' : 'lazy'}
+            width={600}
+            height={400}
             style={{
               position: 'absolute',
               top: 0,

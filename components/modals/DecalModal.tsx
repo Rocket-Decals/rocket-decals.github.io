@@ -7,6 +7,7 @@ import { teamsCreators } from '@/data/teams-creators';
 import { clients } from '@/data/clients';
 import { isTeamCreatorDecal } from '@/types';
 import ModalCarousel from './ModalCarousel';
+import LazyIframe from '@/components/ui/LazyIframe';
 
 export default function DecalModal() {
   const { modalType, modalData, closeModal, isOpen } = useModal();
@@ -53,12 +54,10 @@ export default function DecalModal() {
         
         {isTeamCreatorDecal(decal) ? (
           <>
-            {/* Sketchfab Embed for Teams/Creators */}
+            {/* Sketchfab Embed for Teams/Creators - lazy loaded */}
             <div className="sketchfab-embed-wrapper modal-embed">
-              <iframe
+              <LazyIframe
                 title={decal.sketchfab.title}
-                frameBorder="0"
-                allowFullScreen
                 allow={decal.sketchfab.allow}
                 src={decal.sketchfab.src}
               />

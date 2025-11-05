@@ -5,6 +5,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { useModal } from '@/hooks/useModal';
 import { copyToClipboard } from '@/lib/utils';
 import ImageCarousel from './ImageCarousel';
+import LazyIframe from '@/components/ui/LazyIframe';
 
 interface DecalCardProps {
   decal: TeamCreatorDecal | ClientDecal;
@@ -56,11 +57,9 @@ export default function DecalCard({ decal, onDownloadAll }: DecalCardProps) {
 
       <div className="card-embed-wrapper">
         {isTeamCreatorDecal(decal) ? (
-          // Sketchfab iframe for teams/creators
-          <iframe
+          // Sketchfab iframe for teams/creators - lazy loaded
+          <LazyIframe
             title={decal.sketchfab.title}
-            frameBorder="0"
-            allowFullScreen
             allow={decal.sketchfab.allow}
             src={decal.sketchfab.src}
           />

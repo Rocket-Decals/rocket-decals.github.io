@@ -4,12 +4,32 @@ import dynamic from 'next/dynamic';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import DecalsSection from '@/components/home/DecalsSection';
-import PromoVideoSection from '@/components/home/PromoVideoSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
-import TutorialSection from '@/components/home/TutorialSection';
-import ContactSection from '@/components/home/ContactSection';
-import Footer from '@/components/layout/Footer';
 import AutoScrollHelper from '@/components/home/AutoScrollHelper';
+
+// Dynamically import heavy sections for better performance
+const PromoVideoSection = dynamic(() => import('@/components/home/PromoVideoSection'), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: '400px' }} />,
+});
+
+const ReviewsSection = dynamic(() => import('@/components/home/ReviewsSection'), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: '300px' }} />,
+});
+
+const TutorialSection = dynamic(() => import('@/components/home/TutorialSection'), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: '400px' }} />,
+});
+
+const ContactSection = dynamic(() => import('@/components/home/ContactSection'), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: '500px' }} />,
+});
+
+const Footer = dynamic(() => import('@/components/layout/Footer'), {
+  ssr: false,
+});
 
 // Dynamically import modals to avoid SSR issues
 const DecalModal = dynamic(() => import('@/components/modals/DecalModal'), {

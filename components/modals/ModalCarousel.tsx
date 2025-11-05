@@ -61,6 +61,9 @@ export default function ModalCarousel({ images, alt }: ModalCarouselProps) {
             src={img}
             alt={`${alt} ${idx + 1}`}
             className={`modal-carousel-slide ${idx === currentSlide ? 'active' : ''}`}
+            loading={idx === 0 ? 'eager' : 'lazy'}
+            width={800}
+            height={600}
             style={{
               width: '100%',
               height: '100%',
