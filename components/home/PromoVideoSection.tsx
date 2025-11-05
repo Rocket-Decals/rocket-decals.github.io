@@ -29,7 +29,7 @@ export default function PromoVideoSection() {
 
         className="featured-title"
       >
-        {t('tutorial.title')}
+        {t('nav.discover')}
       </h2>
       <div
 
