@@ -60,10 +60,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/img/logo.png', sizes: '64x64', type: 'image/png' },
+      { url: '/img/logo.webp', sizes: '64x64', type: 'image/webp' },
     ],
     shortcut: '/favicon.ico',
-    apple: '/img/logo.png',
+    apple: '/img/logo.webp',
   },
 };
 
@@ -76,8 +76,8 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/img/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/img/logo.png" />
+        <link rel="icon" href="/img/logo.webp" type="image/webp" />
+        <link rel="apple-touch-icon" href="/img/logo.webp" />
       </head>
       <body className={poppins.className}>
         <LanguageProvider>

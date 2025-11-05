@@ -123,7 +123,7 @@ export default function CollectionCard({ card, discovered, language }: Collectio
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={discovered ? card.image : '/img/logo.png'}
+          src={discovered ? card.image : '/img/logo.webp'}
           alt={discovered ? card.name[language] : '???'}
           className="collection-card-image"
           style={{
@@ -221,7 +221,7 @@ export default function CollectionCard({ card, discovered, language }: Collectio
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/img/logo.png"
+            src="/img/logo.webp"
             alt="Rocket Decals Logo"
             className="collection-back-logo"
             style={{

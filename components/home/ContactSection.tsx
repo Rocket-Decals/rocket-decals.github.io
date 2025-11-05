@@ -98,7 +98,7 @@ export default function ContactSection() {
           </div>
           <div className="team-logo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/logo.png" alt="Rocket Decals Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/img/logo.webp" alt="Rocket Decals Logo" loading="lazy" width="200" height="200" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div className="team-info">
             <h3 className="team-name">Rocket Decals</h3>
