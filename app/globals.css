@@ -2079,7 +2079,7 @@ h3 {
     }
     .model-container, .tuto-container {
         flex-direction: column;
-        height: 180vh;
+        min-height: 180vh;
         width: 100%;
     }
     .model-text {
