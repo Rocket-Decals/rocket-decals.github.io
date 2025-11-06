@@ -58,15 +58,30 @@ export function parseMarkdownLinks(text: string): string {
  * Scroll to element smoothly
  */
 export function scrollToElement(elementId: string): void {
-  const element = document.getElementById(elementId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const tryScroll = (attempts = 0) => {
+    const element = document.getElementById(elementId);
     
-    // Clean URL hash to prevent accumulation
-    if (window.location.hash) {
-      window.history.replaceState(null, '', window.location.pathname);
+    if (element) {
+      // Calculate position with offset for fixed navbar
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - 120; // Offset for fixed navbar
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Clean URL hash to prevent accumulation
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    } else if (attempts < 10) {
+      // Element not found yet (dynamically loaded), retry after a short delay
+      setTimeout(() => tryScroll(attempts + 1), 100);
     }
-  }
+  };
+  
+  tryScroll();
 }
 
 /**

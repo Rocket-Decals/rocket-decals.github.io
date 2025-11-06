@@ -7,6 +7,22 @@ import { scrollToElement } from '@/lib/utils';
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const [showCollection, setShowCollection] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   // Check if easter egg collection should be shown
   useEffect(() => {
@@ -16,7 +32,7 @@ export default function Navbar() {
           const collectionStr = localStorage.getItem('easterEggCollection');
           if (collectionStr) {
             const collection = JSON.parse(collectionStr);
-            setShowCollection(collection.length > 0 && window.innerWidth >= 1400);
+            setShowCollection(collection.length > 0 && window.innerWidth >= 1024);
           }
         } catch (e) {
           setShowCollection(false);
@@ -38,8 +54,22 @@ export default function Navbar() {
     }
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const handleLanguageToggle = () => {
     setLanguage(language === 'fr' ? 'en' : 'fr');
+    setMobileMenuOpen(false);
   };
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -51,9 +81,27 @@ export default function Navbar() {
     }
   };
 
+  const handleMenuItemClick = (elementId: string) => {
+    setMobileMenuOpen(false);
+    scrollToElement(elementId);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <>
       <div className="navbar-bg" />
+      
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-menu-overlay" 
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+      
       <nav className="navbar">
         <a href="#" onClick={handleLogoClick} className="logo-container">
           <div className="logo">
@@ -76,44 +124,67 @@ export default function Navbar() {
           </div>
         </a>
 
-        <div className="menu">
+        {/* Burger Menu Button */}
+        <button 
+          className={`burger-menu ${mobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className={`menu ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <ul>
-            {/* Dropdown Stickers */}
-            <li className="dropdown nav-items">
-              <a className="stickers-menu-title">
-                <p>
-                  <span>{t('nav.stickers')}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: 'rgba(255, 255, 255, 1)' }}>
-                    <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z" />
-                  </svg>
-                </p>
-              </a>
-              <ul className="dropdown-content">
-                <li>
-                  <a 
-                    href="#title-3d"
-                    onClick={(e) => { e.preventDefault(); scrollToElement('title-3d'); }}
-                  >
-                    {t('decals.teams')}
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#title-images"
-                    onClick={(e) => { e.preventDefault(); scrollToElement('title-images'); }}
-                  >
-                    {t('decals.clients')}
-                  </a>
-                </li>
-              </ul>
-            </li>
+            {/* Stickers - Dropdown on desktop, direct link on mobile */}
+            {isMobile ? (
+              <li>
+                <a
+                  href="#title-3d"
+                  className="nav-items"
+                  onClick={(e) => { e.preventDefault(); handleMenuItemClick('title-3d'); }}
+                >
+                  {t('nav.stickers')}
+                </a>
+              </li>
+            ) : (
+              <li className="dropdown nav-items">
+                <a className="stickers-menu-title">
+                  <p>
+                    <span>{t('nav.stickers')}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: 'rgba(255, 255, 255, 1)' }}>
+                      <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z" />
+                    </svg>
+                  </p>
+                </a>
+                <ul className="dropdown-content">
+                  <li>
+                    <a 
+                      href="#title-3d"
+                      onClick={(e) => { e.preventDefault(); handleMenuItemClick('title-3d'); }}
+                    >
+                      {t('decals.teams')}
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="#title-images"
+                      onClick={(e) => { e.preventDefault(); handleMenuItemClick('title-images'); }}
+                    >
+                      {t('decals.clients')}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            )}
 
             {/* Menu Items */}
             <li>
               <a
                 href="#promo-video-container"
                 className="nav-items"
-                onClick={(e) => { e.preventDefault(); scrollToElement('promo-video-container'); }}
+                onClick={(e) => { e.preventDefault(); handleMenuItemClick('promo-video-container'); }}
               >
                 {t('nav.discover')}
               </a>
@@ -122,7 +193,7 @@ export default function Navbar() {
               <a
                 href="#reviews-container"
                 className="nav-items"
-                onClick={(e) => { e.preventDefault(); scrollToElement('reviews-container'); }}
+                onClick={(e) => { e.preventDefault(); handleMenuItemClick('reviews-container'); }}
               >
                 {t('nav.reviews')}
               </a>
@@ -131,7 +202,7 @@ export default function Navbar() {
               <a
                 href="#tuto-container"
                 className="nav-items"
-                onClick={(e) => { e.preventDefault(); scrollToElement('tuto-container'); }}
+                onClick={(e) => { e.preventDefault(); handleMenuItemClick('tuto-container'); }}
               >
                 {t('nav.tutorial')}
               </a>
@@ -140,7 +211,7 @@ export default function Navbar() {
               <a
                 href="#contact-container"
                 className="nav-items"
-                onClick={(e) => { e.preventDefault(); scrollToElement('contact-container'); }}
+                onClick={(e) => { e.preventDefault(); handleMenuItemClick('contact-container'); }}
               >
                 {t('nav.contact')}
               </a>
@@ -152,7 +223,10 @@ export default function Navbar() {
                 <button
                   id="collectionBtn"
                   className="collection-btn"
-                  onClick={() => window.location.hash = 'collection'}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.location.hash = 'collection';
+                  }}
                 >
                   🃏
                 </button>
