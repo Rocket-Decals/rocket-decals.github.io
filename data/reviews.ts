@@ -3,6 +3,17 @@ import { Review } from '@/types';
 
 export const reviews: Review[] = [
   {
+    id: 'nexta-review',
+    user: {
+      name: 'Nexta',
+      firstLetter: 'N',
+    },
+    text: {
+      fr: 'Un grand merci à Erlow et Raito ! Service professionnel, à l’écoute et rapide. Je vous recommande vivement d’acheter votre décal ici !',
+      en: 'A big thank you to Erlow and Raito! Professional service, attentive and fast. I highly recommend buying your decal here!',
+    },
+  },
+  {
     id: 'lifeiscool-review',
     user: {
       name: 'LifeIsCool (RB)',
