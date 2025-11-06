@@ -621,12 +621,12 @@ h3 {
 .branding {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .brand-logo {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
 }
 
