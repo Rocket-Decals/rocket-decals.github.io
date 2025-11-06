@@ -33,7 +33,7 @@ export default function HeroSection() {
       video.loop = true;
       video.muted = true;
       video.playsInline = true;
-      video.preload = 'metadata';
+      video.preload = 'auto'; // Changed from 'metadata' to 'auto' for faster loading
       video.src = currentMedia;
       heroBg.appendChild(video);
       video.play().catch(() => {});

@@ -1,38 +1,5 @@
 /* Rocket Decals - Global Styles */
 
-/* Custom Fonts */
-@font-face {
-    font-family: 'aldoth';
-    src: url('/fonts/AldotheApache.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'aimeriga';
-    src: url('/fonts/Aimeriga Personal Use Only.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'desirable';
-    src: url('/fonts/DesirableCalligraphy.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'brutalism';
-    src: url('/fonts/Y2K Brutalism Typeface.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* CSS Variables */
 :root {
     --smooth-white: #ffffffcb;
@@ -142,10 +109,7 @@ h3 {
 /* Note: Pour le reste du CSS, copier depuis styles.css (lignes 497-2455) et easter-egg.css */
 /* Le fichier complet sera fourni séparément pour éviter les limites de longueur */
 
-/* import poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* Fonts already defined above - removed duplicates */
+/* Poppins font is imported via next/font/google in layout.tsx for optimal performance */
 
 #models-root {
     width: 100%;

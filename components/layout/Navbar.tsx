@@ -109,12 +109,13 @@ export default function Navbar() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 id="brand-logo"
-                src="/img/logo.png"
+                src="/img/logo.svg"
                 alt="Logo"
                 width={75}
                 height={75}
                 className="brand-logo"
                 title="The quietest doors require two knocks."
+                fetchPriority="high"
               />
               <div className="branding-text">
                 <p>Rocket Decals</p>

@@ -109,6 +109,8 @@ export default function ModalCarousel({ images, alt }: ModalCarouselProps) {
                   goToSlide(idx);
                 }}
                 aria-label={`Go to slide ${idx + 1}`}
+                aria-hidden="true"
+                tabIndex={-1}
               />
             ))}
           </div>

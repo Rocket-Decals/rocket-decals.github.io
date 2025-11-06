@@ -9,6 +9,7 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
+  preload: true,
   variable: '--font-poppins',
 });
 
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/img/logo.png', sizes: '64x64', type: 'image/png' },
+      { url: '/img/logo.svg', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.ico',
     apple: '/img/logo.png',
@@ -76,8 +77,12 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/img/logo.png" type="image/png" />
+        <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/img/logo.png" />
+        
+        {/* Preload critical assets for better performance */}
+        <link rel="preload" href="/img/logo.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/video/rl-video-classic.mp4" as="video" type="video/mp4" />
       </head>
       <body className={poppins.className}>
         <LanguageProvider>

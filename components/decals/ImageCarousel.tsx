@@ -115,6 +115,8 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                   goToSlide(idx);
                 }}
                 aria-label={`Go to slide ${idx + 1}`}
+                aria-hidden="true"
+                tabIndex={-1}
               />
             ))}
           </div>
