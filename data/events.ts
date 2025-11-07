@@ -43,7 +43,7 @@ export const events: EventConfig[] = [
     name: 'Classic',
     startDate: '1970-01-01',
     endDate: '2099-12-31',
-    backgroundVideo: '/img/bg/rd_bg.jpg',
+    backgroundVideo: '/img/bg/rd_bg.png',
     logoImage: '/img/logo.svg',
   },
 ];

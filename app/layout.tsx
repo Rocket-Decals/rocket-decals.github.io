@@ -82,7 +82,7 @@ export default function RootLayout({
         
         {/* Preload critical assets for better performance */}
         <link rel="preload" href="/img/logo.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/bg/rd_bg.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/img/bg/rd_bg.png" as="image" type="image/jpeg" />
       </head>
       <body className={poppins.className}>
         <LanguageProvider>
