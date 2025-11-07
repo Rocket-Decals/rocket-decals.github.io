@@ -1,15 +1,16 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
 import { getCurrentEvent } from '@/data/events';
 import { teamsCreators } from '@/data/teams-creators';
 import { isVideo, scrollToElement } from '@/lib/utils';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
   const [currentMedia, setCurrentMedia] = useState<string>('');
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const heroBgRef = useRef<HTMLDivElement>(null);
 
   // Get the latest 4 new decals
@@ -28,11 +29,11 @@ export default function HeroSection() {
 
     const heroBg = heroBgRef.current;
     
-    // Clear existing content
-    heroBg.innerHTML = '';
-    heroBg.style.backgroundImage = '';
-
     if (isVideo(currentMedia)) {
+      // Clear for video
+      heroBg.innerHTML = '';
+      heroBg.style.backgroundImage = '';
+      
       const video = document.createElement('video');
       video.autoplay = true;
       video.loop = true;
@@ -42,14 +43,28 @@ export default function HeroSection() {
       video.src = currentMedia;
       heroBg.appendChild(video);
       video.play().catch(() => {});
+      setIsImageLoaded(true);
     } else {
-      heroBg.style.backgroundImage = `url('${currentMedia}')`;
+      setIsImageLoaded(true);
     }
   }, [currentMedia]);
 
   return (
     <div id="video-container" className="video-container hero-enhanced">
-      <div id="heroBg" className="hero-bg" ref={heroBgRef} />
+      <div id="heroBg" className="hero-bg" ref={heroBgRef}>
+        {currentMedia && !isVideo(currentMedia) && (
+          <Image
+            src={currentMedia}
+            alt="Hero background"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+            onLoadingComplete={() => setIsImageLoaded(true)}
+          />
+        )}
+      </div>
       
       <div className="video-text-container">
         <div className="text-content">
