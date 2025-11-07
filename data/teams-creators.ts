@@ -2,6 +2,50 @@
 import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
+  /*
+  {
+    id: 'rocket-decals',
+    new: true,
+    keywords: [
+      'rocket',
+      'decals',
+      'stickers',
+      'custom',
+      'rocket decals',
+      'fr',
+      'rocket league',
+      'league'
+    ],
+    sketchfab: {
+      title: 'Rocket Decals',
+      src: '',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: 'Rocket Decals',
+      en: 'Rocket Decals',
+    },
+    paragraphs: [
+      {
+        fr: `Un décal spécialemment réalsié pour représenter nos couleurs et notre identité. Pour supporter nos projets et nos créations, téléchargez ce sticker via les boutons ci-dessous !`,
+        en: `A decal specially designed to represent our colors and our identity. To support our projects and our creations, download this sticker through the buttons below!`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/rocket-decals/ROCKET_DECALS_FEN.zip',
+        label: {
+          fr: 'Télécharger pour Fennec',
+          en: 'Download for Fennec',
+        },
+      }
+    ],
+  },*/
   {
     id: 'poyos',
     new: true,
