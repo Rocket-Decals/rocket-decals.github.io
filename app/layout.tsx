@@ -82,7 +82,7 @@ export default function RootLayout({
         
         {/* Preload critical assets for better performance */}
         <link rel="preload" href="/img/logo.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/video/rl-video-classic.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/video/rl-video.mp4" as="video" type="video/mp4" />
       </head>
       <body className={poppins.className}>
         <LanguageProvider>

@@ -3,6 +3,7 @@ import { EventConfig } from '@/types';
 import { isDateBetween } from '@/lib/utils';
 
 export const events: EventConfig[] = [
+  /*
   {
     id: 'halloween',
     name: 'Halloween',
@@ -23,7 +24,7 @@ export const events: EventConfig[] = [
     overlayImage: '/img/event/noel-overlay.png',
     discordLogoImage: '/img/event/noel-logo-discord.png',
   },
-  /*{
+  {
     id: 'newyear',
     name: 'Nouvel An',
     startDate: '2025-01-01',
@@ -42,8 +43,8 @@ export const events: EventConfig[] = [
     name: 'Classic',
     startDate: '1970-01-01',
     endDate: '2099-12-31',
-    backgroundVideo: '/video/rl-video-classic.mp4',
-    logoImage: '/img/event/logo-classic-noir.png',
+    backgroundVideo: '/video/rl-video.mp4',
+    logoImage: '/img/logo.svg',
   },
 ];
 
