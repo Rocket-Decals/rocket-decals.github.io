@@ -2,9 +2,8 @@
 import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
-  /*
   {
-    id: 'rocket-decals',
+    id: 'rd-2025',
     new: true,
     keywords: [
       'rocket',
@@ -17,14 +16,14 @@ export const teamsCreators: TeamCreatorDecal[] = [
       'league'
     ],
     sketchfab: {
-      title: 'Rocket Decals',
-      src: '',
+      title: 'RD 2025',
+      src: 'https://sketchfab.com/models/df6f80eb361a4aa89eae7a6848bff482/embed',
       allow: 'fullscreen; xr-spatial-tracking',
       autostart: false,
     },
     title: {
-      fr: 'Rocket Decals',
-      en: 'Rocket Decals',
+      fr: 'RD 2025',
+      en: 'RD 2025',
     },
     paragraphs: [
       {
@@ -45,7 +44,7 @@ export const teamsCreators: TeamCreatorDecal[] = [
         },
       }
     ],
-  },*/
+  },
   {
     id: 'poyos',
     new: true,
@@ -161,7 +160,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'nhs',
-    new: true,
     keywords: [
       'nhs',
       'pintade',
