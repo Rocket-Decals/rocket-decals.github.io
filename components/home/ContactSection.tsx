@@ -259,24 +259,6 @@ export default function ContactSection() {
                 <h3>{t('contact.thanks')}</h3>
               </div>
               <div className="trust-logos trust-logos-grid">
-                {/* Nexta */}
-                <a
-                  id="nexta-trust-logo"
-                  href="https://www.tiktok.com/@nexta_edit_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="trust-logo trust-logo-compact"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/img/collaborators/nexta_logo.jpg"
-                    alt="Nexta Logo"
-                    width={32}
-                    height={32}
-                    style={{ objectFit: 'contain' }}
-                  />
-                  <span className="trust-logo-name">Nexta</span>
-                </a>
 
                 {/* Wazakiss */}
                 <a
@@ -314,6 +296,44 @@ export default function ContactSection() {
                     style={{ objectFit: 'contain' }}
                   />
                   <span className="trust-logo-name">Spirit</span>
+                </a>
+                
+                {/* Nexta */}
+                <a
+                  id="nexta-trust-logo"
+                  href="https://www.tiktok.com/@nexta_edit_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-logo trust-logo-compact"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/img/collaborators/nexta_logo.jpg"
+                    alt="Nexta Logo"
+                    width={32}
+                    height={32}
+                    style={{ objectFit: 'contain' }}
+                  />
+                  <span className="trust-logo-name">Nexta</span>
+                </a>
+
+                {/* Mei */}
+                <a
+                  id="mei-trust-logo"
+                  href="https://x.com/meinko__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-logo trust-logo-compact"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/img/collaborators/mei_logo.png"
+                    alt="Mei Logo"
+                    width={32}
+                    height={32}
+                    style={{ objectFit: 'contain' }}
+                  />
+                  <span className="trust-logo-name">Mei</span>
                 </a>
               </div>
             </div>
