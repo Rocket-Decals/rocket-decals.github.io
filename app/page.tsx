@@ -48,27 +48,27 @@ export default function HomePage() {
       <main>
         <HeroSection />
         
-        <div className="section-separator" />
+        {/* <div className="section-separator" /> */}
         
         <DecalsSection />
         
-        <div className="section-separator" />
+        {/* <div className="section-separator" /> */}
         
         <PromoVideoSection />
         
-        <div className="section-separator" />
+        {/* <div className="section-separator" /> */}
         
         <ReviewsSection />
         
-        <div className="section-separator" />
+        {/* <div className="section-separator" /> */}
         
         <TutorialSection />
         
-        <div className="section-separator" />
+        {/* <div className="section-separator" /> */}
         
         <ContactSection />
         
-        <div className="section-separator" />
+        {/* <div className="section-separator" /> */}
         
         <Footer />
       </main>
