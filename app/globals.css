@@ -404,17 +404,21 @@ h3 {
 
 .card-open-btn {
     display: none;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
     color: white;
     font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     padding: 8px 14px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .card-open-btn:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     color: #181818;
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
 }
 
 .badge-new {
@@ -2204,12 +2208,28 @@ h3 {
 }
 
 @media (max-width: 1024px) {
-    .model-card-tile { height: 130px; }
+    .model-card-tile { 
+        height: auto;
+        min-height: 320px;
+    }
     .cards-grid {
         grid-template-columns: repeat(1, minmax(220px, 1fr));
         padding: 20px;
         gap: 16px;
         margin-bottom: 40px;
+    }
+    .card-embed-wrapper {
+        height: 200px;
+    }
+    .card-open-btn {
+        display: block;
+    }
+    /* Centrer les textes de la carte CTA sur tablette */
+    .cta-card {
+        flex-direction: column;
+        height: auto;
+        min-height: 320px;
+        gap: 12px;
     }
     /*#karmine, #karmine-2 {
         font-size: 30px;
@@ -2492,15 +2512,17 @@ h3 {
         border-radius: 8px;
     }
     .model-card-tile {
-        height: 90px;
+        height: auto;
+        min-height: 280px;
         padding: 12px;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .card-expand-icon, .card-expand-all, .card-download-all, .card-share-all {
-        top: 32px;
+        top: 8px;
     }
     .badge-new {
-        top: 30px;
+        top: 8px;
     }
     .modal-content h2 {
         font-size: 20px;
@@ -2509,16 +2531,50 @@ h3 {
     .modal-content .modal-embed { height: 42vh; margin-bottom: 14px; }
     .modal-content .model-card { margin: 12px 0; }
     .card-embed-wrapper {
-        display: none;
+        display: block;
         width: 100%;
-        height: 0;
+        height: 180px;
+        margin-bottom: 8px;
+        flex-shrink: 0;
     }
     .card-title {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 8px;
+        order: -1;
     }
     .card-open-btn {
+        display: block;
         font-size: 14px;
-        padding: 6px 10px;
+        padding: 8px 12px;
+        margin-top: auto;
+    }
+    /* Amélioration des contrôles du carousel sur mobile */
+    .carousel-prev,
+    .carousel-next {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+    .carousel-dots {
+        bottom: 8px;
+        gap: 8px;
+    }
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+    /* Centrer les textes de la carte CTA sur mobile */
+    .cta-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 280px;
+        gap: 12px;
+    }
+    .cta-text {
+        text-align: center;
     }
     .models-search-input {
         max-width: 100%;
