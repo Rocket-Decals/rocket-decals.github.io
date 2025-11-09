@@ -1999,7 +1999,7 @@ h3 {
 /* Reviews Section */
 .reviews-container {
     color: white;
-    padding: 40px 40px 60px 40px;
+    padding: 40px 0px 60px 0px;
     margin-top: 20px;
     overflow: hidden;
     width: 100%;
@@ -2129,7 +2129,7 @@ h3 {
 /* Responsive Design for Reviews */
 @media (max-width: 1024px) {
     .reviews-container {
-        padding: 40px 20px 40px 20px;
+        padding: 40px 0px 40px 0px;
         overflow-x: hidden;
     }
     
