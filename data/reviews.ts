@@ -3,6 +3,17 @@ import { Review } from '@/types';
 
 export const reviews: Review[] = [
   {
+    id: 'red-moon-review',
+    user: {
+      name: 'Red Moon',
+      firstLetter: 'R',
+    },
+    text: {
+      fr: 'Un énorme merci à Erlow et Raito pour ce camo de dingue ! Rapides et professionnels, si vous cherchez un camo à votre style, franchement, venez ici !',
+      en: 'A huge thank you to Erlow and Raito for this crazy camo! Fast and professional, if you are looking for a camo to your style, honestly, come here!',
+    },
+  },
+  {
     id: 'nexta-review',
     user: {
       name: 'Nexta',
