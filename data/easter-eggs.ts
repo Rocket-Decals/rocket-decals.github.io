@@ -9,7 +9,17 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'Rocket Decals',
     },
     rarity: 'legendary',
+    rarityLabel: {
+      fr: 'Rocket Decals',
+      en: 'Rocket Decals',
+    },
     image: '/img/partners/rocket-decals_car.png',
+    colors: {
+      primary: '#eaeaea',
+      secondary: '#ffffff',
+      border: '#eaeaea',
+      text: '#181818',
+    },
     triggeredBy: ['brand-logo'],
   },
   {
@@ -19,7 +29,17 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'Raito',
     },
     rarity: 'legendary',
+    rarityLabel: {
+      fr: 'FONDATEUR',
+      en: 'FOUNDER',
+    },
     image: '/img/rd/raito_car.png',
+    colors: {
+      primary: '#8e2f11',
+      secondary: '#b8543a',
+      border: '#8e2f11',
+      text: '#ffffff',
+    },
     triggeredBy: ['raito-card-trigger'],
   },
   {
@@ -29,7 +49,17 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'Erlow',
     },
     rarity: 'legendary',
+    rarityLabel: {
+      fr: 'FONDATEUR',
+      en: 'FOUNDER',
+    },
     image: '/img/rd/erlow_car.png',
+    colors: {
+      primary: '#4579e7',
+      secondary: '#6b9eff',
+      border: '#4579e7',
+      text: '#ffffff',
+    },
     triggeredBy: ['erlow-card-trigger'],
   },
   {
@@ -39,7 +69,17 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'SaaXqi',
     },
     rarity: 'epic',
+    rarityLabel: {
+      fr: 'CRÉATEUR DE CONTENU',
+      en: 'CONTENT CREATOR',
+    },
     image: '/img/partners/saaxqi_car.png',
+    colors: {
+      primary: '#9000ff',
+      secondary: '#b200ff',
+      border: '#9000ff',
+      text: '#ffffff',
+    },
     triggeredBy: ['saaxqi-trust-logo'],
   },
   {
@@ -49,7 +89,17 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'PxR',
     },
     rarity: 'epic',
+    rarityLabel: {
+      fr: 'ÉQUIPE',
+      en: 'TEAM',
+    },
     image: '/img/partners/pxr_car.png',
+    colors: {
+      primary: '#fb1440',
+      secondary: '#fb1440',
+      border: '#fb1440',
+      text: '#ffffff',
+    },
     triggeredBy: ['pxr-card-trigger'],
   },
   {
@@ -59,7 +109,17 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'NHS',
     },
     rarity: 'epic',
+    rarityLabel: {
+      fr: 'CRÉATEUR DE CONTENU',
+      en: 'CONTENT CREATOR',
+    },
     image: '/img/partners/nhs_car.png',
+    colors: {
+      primary: '#ad295d',
+      secondary: '#ad295d',
+      border: '#ad295d',
+      text: '#ffffff',
+    },
     triggeredBy: ['nhs-trust-logo'],
   },
   {
@@ -69,8 +129,38 @@ export const easterEggCards: EasterEggCard[] = [
       en: 'Poyos',
     },
     rarity: 'rare',
+    rarityLabel: {
+      fr: 'CRÉATEUR DE CONTENU',
+      en: 'CONTENT CREATOR',
+    },
     image: '/img/partners/poyos_car.png',
+    colors: {
+      primary: '#DFA86F',
+      secondary: '#DFA86F',
+      border: '#DFA86F',
+      text: '#ffffff',
+    },
     triggeredBy: ['poyos-trust-logo'],
+  },
+  {
+    id: 'noblaze',
+    name: {
+      fr: '10noblaze',
+      en: '10noblaze',
+    },
+    rarity: 'legendary',
+    rarityLabel: {
+      fr: 'CRÉATEUR DE CONTENU',
+      en: 'CONTENT CREATOR',
+    },
+    image: '/img/partners/10noblaze_car.png',
+    colors: {
+      primary: '#57c6ed',
+      secondary: '#57c6ed',
+      border: '#57c6ed',
+      text: '#ffffff',
+    },
+    triggeredBy: ['noblaze-trust-logo'],
   },
 ];
 

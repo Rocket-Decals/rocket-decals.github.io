@@ -3,6 +3,49 @@ import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
   {
+    id: 'noblaze',
+    new: true,
+    keywords: [
+      'noblaze',
+      '10noblaze',
+      '10',
+      'fr',
+      'rocket league',
+      'league',
+      'creator',
+      'createur',
+    ],
+    sketchfab: {
+      title: '10noblaze',
+      src: 'https://sketchfab.com/models/1122240955fc43b591cba7366bdc62ae/embed',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: '10noblaze',
+      en: '10noblaze',
+    },
+    paragraphs: [
+      {
+        fr: `Un sticker exclusif pour 10noblaze, mêlant élégance et performance. Chaque détail a été pensé pour retranscrire son ADN dans l’univers Rocket League.`,
+        en: `An exclusive sticker for 10noblaze, combining elegance and performance. Each detail has been thought to retranscribe his DNA in the Rocket League universe.`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/noblaze/NBZ.rar',
+        label: {
+          fr: 'Télécharger pour Fennec',
+          en: 'Download for Fennec',
+        },
+      },
+    ],
+  },
+  {
     id: 'rd-2025',
     new: true,
     keywords: [
@@ -97,7 +140,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'm8-cod',
-    new: true,
     keywords: [
       'm8',
       'gentle mates',

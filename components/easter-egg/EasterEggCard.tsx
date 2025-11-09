@@ -7,37 +7,14 @@ import { useLanguage } from '@/hooks/useLanguage';
 interface EasterEggCardProps {
   card: EasterEggCardType;
   onClose: () => void;
-  colors: {
-    primary: string;
-    secondary: string;
-    border: string;
-    text: string;
-  };
 }
 
-// Rarity labels matching original config
-const rarityLabels: Record<string, { fr: string; en: string }> = {
-  'rocket-decals': { fr: 'Rocket Decals', en: 'Rocket Decals' },
-  'raito': { fr: 'FONDATEUR', en: 'FOUNDER' },
-  'erlow': { fr: 'FONDATEUR', en: 'FOUNDER' },
-  'saaxqi': { fr: 'CRÉATEUR DE CONTENU', en: 'CONTENT CREATOR' },
-  'pxr': { fr: 'ÉQUIPE', en: 'TEAM' },
-  'nhs': { fr: 'CRÉATEUR DE CONTENU', en: 'CONTENT CREATOR' },
-  'poyos': { fr: 'CRÉATEUR DE CONTENU', en: 'CONTENT CREATOR' },
-};
-
-export default function EasterEggCard({ card, onClose, colors }: EasterEggCardProps) {
+export default function EasterEggCard({ card, onClose }: EasterEggCardProps) {
   const { language } = useLanguage();
   const [showBooster, setShowBooster] = useState(true);
   const [showCard, setShowCard] = useState(false);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
-  
-  // Get the correct rarity label for this card
-  const rarityLabel = rarityLabels[card.id] || { 
-    fr: card.rarity.toUpperCase(), 
-    en: card.rarity.toUpperCase() 
-  };
 
   useEffect(() => {
     // Animation sequence
@@ -98,7 +75,7 @@ export default function EasterEggCard({ card, onClose, colors }: EasterEggCardPr
         <div
           className="booster-pack"
           style={{
-            background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})`,
+            background: `linear-gradient(135deg, ${card.colors.primary}, ${card.colors.secondary})`,
             width: '200px',
             height: '280px',
             borderRadius: '16px',
@@ -153,7 +130,7 @@ export default function EasterEggCard({ card, onClose, colors }: EasterEggCardPr
             className="easter-card-front"
             style={{
               background: 'linear-gradient(135deg, #1a1a1a, #2d2d2d)',
-              border: `2px solid ${colors.border}`,
+              border: `2px solid ${card.colors.border}`,
               borderRadius: '20px',
               position: 'absolute',
               width: '100%',
@@ -177,7 +154,7 @@ export default function EasterEggCard({ card, onClose, colors }: EasterEggCardPr
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: `linear-gradient(45deg, transparent 30%, ${colors.primary}20 50%, transparent 70%)`,
+                background: `linear-gradient(45deg, transparent 30%, ${card.colors.primary}20 50%, transparent 70%)`,
                 animation: 'shine 3s infinite',
               }}
             />
@@ -229,20 +206,20 @@ export default function EasterEggCard({ card, onClose, colors }: EasterEggCardPr
 
             <div
               style={{
-                background: `linear-gradient(45deg, ${colors.primary}, ${colors.secondary})`,
-                color: colors.text,
+                background: `linear-gradient(45deg, ${card.colors.primary}, ${card.colors.secondary})`,
+                color: card.colors.text,
                 padding: '8px 16px',
                 borderRadius: '20px',
                 fontSize: '14px',
                 fontWeight: 600,
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
-                boxShadow: `0 4px 8px ${colors.primary}50`,
+                boxShadow: `0 4px 8px ${card.colors.primary}50`,
                 lineHeight: 1.2,
                 zIndex: 1,
               }}
             >
-              {rarityLabel[language]}
+              {card.rarityLabel[language]}
             </div>
           </div>
         </div>

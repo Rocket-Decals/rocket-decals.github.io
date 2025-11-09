@@ -10,73 +10,8 @@ interface CollectionCardProps {
   language: Language;
 }
 
-// Card colors matching original config
-const cardColors: Record<string, any> = {
-  'rocket-decals': {
-    primary: '#eaeaea',
-    secondary: '#ffffff',
-    border: '#eaeaea',
-    text: '#181818',
-  },
-  'raito': {
-    primary: '#8e2f11',
-    secondary: '#b8543a',
-    border: '#8e2f11',
-    text: '#ffffff',
-  },
-  'erlow': {
-    primary: '#4579e7',
-    secondary: '#6b9eff',
-    border: '#4579e7',
-    text: '#ffffff',
-  },
-  'saaxqi': {
-    primary: '#9000ff',
-    secondary: '#b200ff',
-    border: '#9000ff',
-    text: '#ffffff',
-  },
-  'pxr': {
-    primary: '#fb1440',
-    secondary: '#fb1440',
-    border: '#fb1440',
-    text: '#ffffff',
-  },
-  'nhs': {
-    primary: '#ad295d',
-    secondary: '#ad295d',
-    border: '#ad295d',
-    text: '#ffffff',
-  },
-  'poyos': {
-    primary: '#DFA86F',
-    secondary: '#DFA86F',
-    border: '#DFA86F',
-    text: '#ffffff',
-  },
-};
-
-const rarityLabels: Record<string, { fr: string; en: string }> = {
-  'rocket-decals': { fr: 'Rocket Decals', en: 'Rocket Decals' },
-  'raito': { fr: 'FONDATEUR', en: 'FOUNDER' },
-  'erlow': { fr: 'FONDATEUR', en: 'FOUNDER' },
-  'saaxqi': { fr: 'CRÉATEUR DE CONTENU', en: 'CONTENT CREATOR' },
-  'pxr': { fr: 'ÉQUIPE', en: 'TEAM' },
-  'nhs': { fr: 'CRÉATEUR DE CONTENU', en: 'CONTENT CREATOR' },
-  'poyos': { fr: 'CRÉATEUR DE CONTENU', en: 'CONTENT CREATOR' },
-};
-
 export default function CollectionCard({ card, discovered, language }: CollectionCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  
-  const colors = cardColors[card.id] || {
-    primary: '#888',
-    secondary: '#888',
-    border: '#888',
-    text: '#fff',
-  };
-
-  const rarity = rarityLabels[card.id] || { fr: card.rarity.toUpperCase(), en: card.rarity.toUpperCase() };
 
   const handleClick = () => {
     if (discovered) {
@@ -106,7 +41,7 @@ export default function CollectionCard({ card, discovered, language }: Collectio
         className="collection-card-front"
         style={{
           background: 'linear-gradient(135deg, #1a1a1a, #2d2d2d)',
-          border: `2px solid ${colors.border}`,
+          border: `2px solid ${card.colors.border}`,
           borderRadius: '16px',
           position: 'absolute',
           width: '100%',
@@ -168,19 +103,19 @@ export default function CollectionCard({ card, discovered, language }: Collectio
         <div
           className="collection-card-rarity"
           style={{
-            background: discovered ? `linear-gradient(45deg, ${colors.primary}, ${colors.secondary})` : '#555',
-            color: discovered ? colors.text : '#aaa',
+            background: discovered ? `linear-gradient(45deg, ${card.colors.primary}, ${card.colors.secondary})` : '#555',
+            color: discovered ? card.colors.text : '#aaa',
             padding: '6px 12px',
             borderRadius: '15px',
             fontSize: '10px',
             fontWeight: 600,
             textTransform: 'uppercase',
             letterSpacing: '1px',
-            boxShadow: discovered ? `0 2px 4px ${colors.primary}50` : 'none',
+            boxShadow: discovered ? `0 2px 4px ${card.colors.primary}50` : 'none',
             lineHeight: 1.2,
           }}
         >
-          {discovered ? rarity[language] : '???'}
+          {discovered ? card.rarityLabel[language] : '???'}
         </div>
       </div>
 
@@ -188,8 +123,8 @@ export default function CollectionCard({ card, discovered, language }: Collectio
       <div
         className="collection-card-back"
         style={{
-          background: discovered ? `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})` : '#2a2a2a',
-          border: `2px solid ${colors.border}`,
+          background: discovered ? `linear-gradient(135deg, ${card.colors.primary}, ${card.colors.secondary})` : '#2a2a2a',
+          border: `2px solid ${card.colors.border}`,
           borderRadius: '16px',
           position: 'absolute',
           width: '100%',
@@ -216,7 +151,7 @@ export default function CollectionCard({ card, discovered, language }: Collectio
             justifyContent: 'center',
             background: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '50%',
-            border: `2px solid ${colors.border}`,
+            border: `2px solid ${card.colors.border}`,
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -238,7 +173,7 @@ export default function CollectionCard({ card, discovered, language }: Collectio
           style={{
             fontSize: '14px',
             fontWeight: 'bold',
-            color: colors.text,
+            color: card.colors.text,
             textAlign: 'center',
             marginBottom: '8px',
             textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',

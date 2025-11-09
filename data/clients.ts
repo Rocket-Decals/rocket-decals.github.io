@@ -3,6 +3,20 @@ import { ClientDecal } from '@/types';
 
 export const clients: ClientDecal[] = [
   {
+    id: 'red-moon',
+    new: true,
+    title: {
+      fr: 'Red Moon',
+      en: 'Red Moon',
+    },
+    keywords: ['red moon', 'rocket league', 'stickers', 'custom', 'decal'],
+    images: [
+      '/img/decals/red-moon/red-moon-2.png',
+      '/img/decals/red-moon/red-moon-1.png',
+      '/img/decals/red-moon/red-moon-3.png',
+    ],
+  },
+  {
     id: 'nexta',
     new: true,
     title: {
