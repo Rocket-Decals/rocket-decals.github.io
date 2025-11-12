@@ -130,6 +130,13 @@ export const teamsCreators: TeamCreatorDecal[] = [
         },
       },
       {
+        href: '/decals/poyos/Poyos_OCT.rar',
+        label: {
+          fr: 'Télécharger pour Octane',
+          en: 'Download for Octane',
+        },
+      },
+      {
         href: '/decals/poyos/Poyos_DOM.rar',
         label: {
           fr: 'Télécharger pour Dominus',
