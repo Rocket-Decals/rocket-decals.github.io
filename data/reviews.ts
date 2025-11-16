@@ -3,6 +3,17 @@ import { Review } from '@/types';
 
 export const reviews: Review[] = [
   {
+    id: 'noblaze-review',
+    user: {
+      name: '10noblaze',
+      firstLetter: 'N',
+    },
+    text: {
+      fr: 'Bravo à vous deux pour le sticker, il est magnifique ! Vous êtes très doués, en plus d’être super sympas. Merci, et encore bravo !',
+      en: 'Congratulations to you two for the sticker, it is magnificent! You are very talented, in addition to being super nice. Thank you, and again congratulations!',
+    },
+  },
+  {
     id: 'red-moon-review',
     user: {
       name: 'Red Moon',
