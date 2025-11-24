@@ -249,6 +249,25 @@ export default function ContactSection() {
                   />
                   <span className="trust-logo-name">10noblaze</span>
                 </a>
+
+                {/* Kaokor */}
+                <a
+                  id="kaokor-trust-logo"
+                  href="https://www.tiktok.com/@kaokorrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-logo"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/img/partners/kaokor_logo.jpg"
+                    alt="Kaokor Logo"
+                    width={64}
+                    height={64}
+                    style={{ objectFit: 'contain' }}
+                  />
+                  <span className="trust-logo-name">Kaokor</span>
+                </a>
               </div>
             </div>
           </div>
