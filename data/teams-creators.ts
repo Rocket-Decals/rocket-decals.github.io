@@ -38,14 +38,14 @@ export const teamsCreators: TeamCreatorDecal[] = [
     ],
     downloads: [
       {
-        href: '/decals/france-2025/FRANCE_25.rar',
+        href: '/decals/france-2025/France_25.rar',
         label: {
           fr: 'Télécharger Universel',
           en: 'Download Universal',
         },
       },
       {
-        href: '/decals/france-2025/FRANCE_25_BALL.rar',
+        href: '/decals/france-2025/France_25_ball.rar',
         label: {
           fr: 'Télécharger pour ballon',
           en: 'Download for ball',
