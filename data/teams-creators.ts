@@ -3,6 +3,57 @@ import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
   {
+    id: 'france-2025',
+    new: true,
+    keywords: [
+      'france',
+      '2025',
+      'fr',
+      'rocket league',
+      'league',
+      'worlds',
+      'team',
+      'esport',
+      'equipe',
+    ],
+    sketchfab: {
+      title: 'France 2025',
+      src: 'https://sketchfab.com/models/24ec23a453d8479d803a5ca609c82b4f/embed',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: 'France 2025',
+      en: 'France 2025',
+    },
+    paragraphs: [
+      {
+        fr: `Un sticker spécialement conçu pour représenter la France dans l’univers Rocket League. Reprenant les codes visuels de la France, il a été spécialement adapté pour refléter l'énergie, la passion et le style de la France.`,
+        en: `A sticker specially designed to represent France in the Rocket League universe. Taking up the visual codes of France, it has been specially adapted to reflect the energy, passion and style of France.`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/france-2025/FRANCE_25.rar',
+        label: {
+          fr: 'Télécharger Universel',
+          en: 'Download Universal',
+        },
+      },
+      {
+        href: '/decals/france-2025/FRANCE_25_BALL.rar',
+        label: {
+          fr: 'Télécharger pour ballon',
+          en: 'Download for ball',
+        },
+      },
+    ],
+  },
+  {
     id: 'noblaze',
     new: true,
     keywords: [
@@ -90,7 +141,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'poyos',
-    new: true,
     keywords: [
       'poyos',
       'nixus',

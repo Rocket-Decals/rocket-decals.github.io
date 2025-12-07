@@ -2026,7 +2026,7 @@ h3 {
 
 .reviews-track {
     display: inline-flex;
-    animation: scroll-reviews 30s linear infinite;
+    animation: scroll-reviews 50s linear infinite;
     gap: 24px;
     padding: 0 24px;
 }
@@ -2035,7 +2035,7 @@ h3 {
     .reviews-track {
         gap: 12px;
         padding: 0 12px;
-        animation-duration: 40s;
+        animation-duration: 60s;
     }
 
     .reviews-grid {
