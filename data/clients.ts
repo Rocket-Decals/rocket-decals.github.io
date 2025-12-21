@@ -2,9 +2,39 @@
 import { ClientDecal } from '@/types';
 
 export const clients: ClientDecal[] = [
+  
+  {
+    id: 'fanaticrr',
+    new: true,
+    title: {
+      fr: 'FanaticRR',
+      en: 'FanaticRR',
+    },
+    keywords: ['fanaticrr', 'rocket league', 'stickers', 'custom', 'decal'],
+    images: ['/img/decals/fanaticrr/fanaticrr-1.png', '/img/decals/fanaticrr/fanaticrr-2.png', '/img/decals/fanaticrr/fanaticrr-3.png'],
+  },
+  {
+    id: 'vix',
+    new: true,
+    title: {
+      fr: 'Vix',
+      en: 'Vix',
+    },
+    keywords: ['vix', 'rocket league', 'stickers', 'custom', 'decal'],
+    images: ['/img/decals/vix/vix-1.png', '/img/decals/vix/vix-2.png', '/img/decals/vix/vix-3.png'],
+  },
+  {
+    id: 'sano',
+    new: true,
+    title: {
+      fr: 'Sano',
+      en: 'Sano',
+    },
+    keywords: ['sano', 'rocket league', 'stickers', 'custom', 'decal'],
+    images: ['/img/decals/sano/sano-1.png', '/img/decals/sano/sano-2.png', '/img/decals/sano/sano-3.png'],
+  },
   {
     id: 'red-moon',
-    new: true,
     title: {
       fr: 'Red Moon',
       en: 'Red Moon',
@@ -18,7 +48,6 @@ export const clients: ClientDecal[] = [
   },
   {
     id: 'nexta',
-    new: true,
     title: {
       fr: 'Nexta',
       en: 'Nexta',
