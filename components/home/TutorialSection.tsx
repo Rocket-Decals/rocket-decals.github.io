@@ -20,7 +20,7 @@ export default function TutorialSection() {
           <h3>{t('tutorial.step1.title')}</h3>
           <p>
             {t('tutorial.step1.text')}{' '}
-            <a target="_blank" href="https://bakkesplugins.com/plugins/view/108" rel="noopener noreferrer">
+            <a target="_blank" href="https://bakkesplugins.com/plugin/108" rel="noopener noreferrer">
               AlphaConsole
             </a>
           </p>
