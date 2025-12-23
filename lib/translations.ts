@@ -16,6 +16,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Téléchargez nos stickers customs !',
     'hero.cta.discover': 'Découvrir les stickers',
     'hero.cta.order': 'Commander un sticker',
+    'hero.cta.playMiniGame': 'Jouer à notre mini-jeu',
     'hero.latestAdditions': 'Derniers ajouts :',
     
     // Decals
@@ -102,6 +103,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Download our custom decals!',
     'hero.cta.discover': 'Discover decals',
     'hero.cta.order': 'Order a decal',
+    'hero.cta.playMiniGame': 'Play our mini-game',
     'hero.latestAdditions': 'Latest additions:',
     
     // Decals

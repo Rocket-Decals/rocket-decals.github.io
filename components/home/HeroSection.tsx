@@ -85,6 +85,11 @@ export default function HeroSection() {
               </button>
             </a>
           </div>
+          <a href="https://rocket-decals.com/game" target="_blank" rel="noopener noreferrer" className="hero-mini-game-link">
+            <button className="discover-button hero-mini-game-button">
+              {t('hero.cta.playMiniGame')}
+            </button>
+          </a>
         </div>
       </div>
 

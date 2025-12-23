@@ -724,6 +724,28 @@ h3 {
     align-items: center;
 }
 
+.hero-mini-game-link {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 16px auto 0 auto;
+}
+
+.hero-mini-game-button {
+    width: 100%;
+    background: linear-gradient(135deg, #282828, #282828);
+    border-color: transparent;
+    color: #181818;
+}
+
+.hero-mini-game-button:hover {
+    background: linear-gradient(135deg, #282828, #282828);
+    color: #ffffff !important;
+    transform: scale(1.05) translateY(-2px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 .discover-button {
     position: relative;
     background-color: rgba(255, 255, 255, 0.05);
@@ -2618,6 +2640,17 @@ h3 {
         max-width: 300px;
     }
     .hero-cta-buttons button {
+        width: 100%;
+        white-space: nowrap;
+    }
+    .hero-mini-game-link {
+        display: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 12px auto 0 auto;
+        padding: 0 20px;
+    }
+    .hero-mini-game-button {
         width: 100%;
         white-space: nowrap;
     }
