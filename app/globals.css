@@ -1312,7 +1312,7 @@ h3 {
     margin-bottom: 60px !important;
 }
 
-/* Hide contact section on small height screens */
+/* Hide new decals section on small height screens */
 @media (max-height: 700px) {
     .hero-new-decals-minimal {
         display: none !important;
