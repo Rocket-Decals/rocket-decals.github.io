@@ -1312,6 +1312,13 @@ h3 {
     margin-bottom: 60px !important;
 }
 
+/* Hide contact section on small height screens */
+@media (max-height: 700px) {
+    .hero-new-decals-minimal {
+        display: none !important;
+    }
+}
+
 
 /* All Cards Container */
 .all-cards {
