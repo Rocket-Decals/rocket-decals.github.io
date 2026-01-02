@@ -100,7 +100,7 @@ export const easterEggCards: EasterEggCard[] = [
       border: '#fb1440',
       text: '#ffffff',
     },
-    triggeredBy: ['pxr-card-trigger'],
+    triggeredBy: ['pxr-trust-logo'],
   },
   {
     id: 'nhs',
@@ -161,6 +161,26 @@ export const easterEggCards: EasterEggCard[] = [
       text: '#ffffff',
     },
     triggeredBy: ['noblaze-trust-logo'],
+  },
+  {
+    id: 'gameward',
+    name: {
+      fr: 'GameWard',
+      en: 'GameWard',
+    },
+    rarity: 'legendary',
+    rarityLabel: {
+      fr: 'ÉQUIPE',
+      en: 'TEAM',
+    },
+    image: '/img/partners/gameward_car.png',
+    colors: {
+      primary: '#120c2a',
+      secondary: '#120c2a',
+      border: '#120c2a',
+      text: '#ffffff',
+    },
+    triggeredBy: ['gameward-trust-logo'],
   },
 ];
 

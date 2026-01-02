@@ -3,6 +3,49 @@ import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
   {
+    id: 'gameward',
+    new: true,
+    keywords: [
+      'gameward',
+      'kaokor',
+      'gw',
+      'rocket league',
+      'league',
+      'team',
+      'esport',
+      'equipe',
+    ],
+    sketchfab: {
+      title: 'GameWard',
+      src: 'https://sketchfab.com/models/a78de1a21e204d968591662d9a1a5061/embed',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: 'GameWard',
+      en: 'GameWard',
+    },
+    paragraphs: [
+      {
+        fr: `Un sticker spécialement conçu pour la vidéo de Kaokor qui mettait en confrontation différents créateurs de décals pour réaliser celui de GameWard !`,
+        en: `A sticker specially designed for Kaokor's video which puts different decal creators in confrontation to create the one of GameWard!`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/gameward/GW.rar',
+        label: {
+          fr: 'Télécharger pour Fennec',
+          en: 'Download for Fennec',
+        },
+      },
+    ],
+  },
+  {
     id: 'france-2025',
     new: true,
     keywords: [
@@ -98,7 +141,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'rd-2025',
-    new: true,
     keywords: [
       'rocket',
       'decals',

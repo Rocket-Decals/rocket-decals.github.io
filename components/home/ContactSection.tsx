@@ -129,13 +129,11 @@ export default function ContactSection() {
         </div>
 
         {/* PxR Partner Card */}
-        <div id="pxr-card-trigger" className="team-card">
+        {/* <div id="pxr-card-trigger" className="team-card">
           <div className="team-banner">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/img/rd/pxr_banner.png" alt="PXR Banner" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div className="team-logo">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/img/rd/pxr-logo.png" alt="PXR Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div className="team-info">
@@ -164,7 +162,7 @@ export default function ContactSection() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Trust Cards */}
         <div className="trust-cards-wrapper">
@@ -267,6 +265,44 @@ export default function ContactSection() {
                     style={{ objectFit: 'contain' }}
                   />
                   <span className="trust-logo-name">Kaokor</span>
+                </a>
+                
+                {/* GameWard */}
+                <a
+                  id="gameward-trust-logo"
+                  href="https://gameward.team/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-logo"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/img/partners/gameward_logo.jpg"
+                    alt="Gameward Logo"
+                    width={64}
+                    height={64}
+                    style={{ objectFit: 'contain' }}
+                  />
+                  <span className="trust-logo-name">GameWard</span>
+                </a>
+
+                {/* PxR */}
+                <a
+                  id="pxr-trust-logo"
+                  href="https://www.tiktok.com/@team.pxr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-logo"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/img/partners/pxr_logo.png"
+                    alt="PxR Logo"
+                    width={64}
+                    height={64}
+                    style={{ objectFit: 'contain' }}
+                  />
+                  <span className="trust-logo-name">PxR</span>
                 </a>
               </div>
             </div>
