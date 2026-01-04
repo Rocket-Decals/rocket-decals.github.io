@@ -549,6 +549,16 @@ h3 {
     line-height: 1.6;
 }
 
+.modal-content .model-card a {
+    color: dodgerblue;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content .model-card a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
 .modal-content .download-container {
     margin-top: 24px;
     display: flex;

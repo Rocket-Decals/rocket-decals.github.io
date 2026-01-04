@@ -3,7 +3,7 @@ import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
   {
-    id: 'gameward',
+    id: 'gameward-kaokor',
     new: true,
     keywords: [
       'gameward',
@@ -16,19 +16,19 @@ export const teamsCreators: TeamCreatorDecal[] = [
       'equipe',
     ],
     sketchfab: {
-      title: 'GameWard',
+      title: 'GameWard Kaokor',
       src: 'https://sketchfab.com/models/a78de1a21e204d968591662d9a1a5061/embed',
       allow: 'fullscreen; xr-spatial-tracking',
       autostart: false,
     },
     title: {
-      fr: 'GameWard',
-      en: 'GameWard',
+      fr: 'GameWard Kaokor',
+      en: 'GameWard Kaokor',
     },
     paragraphs: [
       {
-        fr: `Un sticker spécialement conçu pour la vidéo de Kaokor qui mettait en confrontation différents créateurs de décals pour réaliser celui de GameWard !`,
-        en: `A sticker specially designed for Kaokor's video which puts different decal creators in confrontation to create the one of GameWard!`,
+        fr: `Un sticker spécialement conçu pour [la vidéo de Kaokor](https://youtu.be/NCUSkSk2BGM?si=9OCM-8YCP2IFhvNi) qui met en confrontation différents créateurs de décals pour réaliser le décal de GameWard !`,
+        en: `A sticker specially designed for [Kaokor's video](https://youtu.be/NCUSkSk2BGM?si=9OCM-8YCP2IFhvNi) which puts different decal creators in confrontation to create the decal of GameWard!`,
       },
       {
         fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,

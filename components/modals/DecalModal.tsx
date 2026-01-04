@@ -6,6 +6,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { teamsCreators } from '@/data/teams-creators';
 import { clients } from '@/data/clients';
 import { isTeamCreatorDecal } from '@/types';
+import { parseMarkdownLinks } from '@/lib/utils';
 import ModalCarousel from './ModalCarousel';
 import LazyIframe from '@/components/ui/LazyIframe';
 
@@ -64,11 +65,17 @@ export default function DecalModal() {
             </div>
 
             {/* Paragraphs */}
-            {decal.paragraphs.map((para, idx) => (
-              <div key={idx} className="model-card">
-                {para[language] || para.fr}
-              </div>
-            ))}
+            {decal.paragraphs.map((para, idx) => {
+              const text = para[language] || para.fr;
+              const parsedText = parseMarkdownLinks(text);
+              return (
+                <div
+                  key={idx}
+                  className="model-card"
+                  dangerouslySetInnerHTML={{ __html: parsedText }}
+                />
+              );
+            })}
 
             {/* Downloads */}
             {decal.downloads && decal.downloads.length > 0 && (
