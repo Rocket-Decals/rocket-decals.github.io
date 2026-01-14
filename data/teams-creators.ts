@@ -3,6 +3,60 @@ import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
   {
+    id: 'pxr-2026',
+    new: true,
+    keywords: [
+      'pxr',
+      '2026',
+      'pxr-2026',
+      'rocket league',
+      'league',
+      'team',
+      'esport',
+      'equipe',
+    ],
+    sketchfab: {
+      title: 'PxR 2026',
+      src: 'https://sketchfab.com/models/5bab54a33f1a44b8bc802218c24b1998/embed',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: 'PxR 2026',
+      en: 'PxR 2026',
+    },
+    paragraphs: [
+      {
+        fr: `Le décal PxR 26 incarne la vitesse, la précision et l'audace. Un design taillé pour les vrais compétiteurs — ceux qui jouent pour dominer, pas pour participer. Avec son style unique et agressif, ce décal impose la signature PxR sur chaque terrain.`,
+        en: `The PxR 26 decal embodies speed, precision, and audacity. A design tailored for true competitors — those who play to dominate, not to participate. With its unique and aggressive style, this decal imposes the PxR signature on every field.`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/pxr-2026/PXR26_FEN.rar',
+        label: {
+          fr: 'Télécharger pour Fennec',
+          en: 'Download for Fennec',
+        },
+      },
+      {
+        href: '/decals/pxr-2026/PXR26_OCT.rar',
+        label: {
+          fr: 'Télécharger pour Octane',
+          en: 'Download for Octane',
+        },
+      }
+    ],
+  },
+
+
+
+
+  {
     id: 'gameward-kaokor',
     new: true,
     keywords: [
@@ -98,7 +152,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'noblaze',
-    new: true,
     keywords: [
       'noblaze',
       '10noblaze',
