@@ -52,10 +52,64 @@ export const teamsCreators: TeamCreatorDecal[] = [
       }
     ],
   },
-
-
-
-
+  {
+    id: 'horizon-esport-2026',
+    new: true,
+    keywords: [
+      'horizon',
+      'esport',
+      '2026',
+      'horizon-esport-2026',
+      'rocket league',
+      'league',
+      'team',
+      'esport',
+      'equipe',
+    ],
+    sketchfab: {
+      title: 'Horizon Esport 2026',
+      src: 'https://sketchfab.com/models/179d3b7759494e778a0cffbcf0932d75/embed',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: 'Horizon Esport 2026',
+      en: 'Horizon Esport 2026',
+    },
+    paragraphs: [
+      {
+        fr: `Le décal Horizon Esport 26 incarne l'agressivité, la précision et le talent. Un design taillé pour les vrais compétiteurs - ceux qui jouent pour dominer, pas pour participer. Avec son style unique et agressif, ce décal impose la signature Horizon Esport sur chaque terrain.`,
+        en: `The Horizon Esport 26 decal embodies speed, precision, and audacity. A design tailored for true competitors — those who play to dominate, not to participate. With its unique and aggressive style, this decal imposes the Horizon Esport signature on every field.`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/horizon-esport-2026/Horizon_Esport_26_FEN.rar',
+        label: {
+          fr: 'Télécharger pour Fennec',
+          en: 'Download for Fennec',
+        },
+      },
+      {
+        href: '/decals/horizon-esport-2026/Horizon_Esport_26_OCT.rar',
+        label: {
+          fr: 'Télécharger pour Octane',
+          en: 'Download for Octane',
+        },
+      },
+      {
+        href: '/decals/horizon-esport-2026/BALL_HORIZON.rar',
+        label: {
+          fr: 'Télécharger le ballon',
+          en: 'Download the ball',
+        },
+      },
+    ],
+  },
   {
     id: 'gameward-kaokor',
     new: true,
@@ -101,7 +155,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'france-2025',
-    new: true,
     keywords: [
       'france',
       '2025',
