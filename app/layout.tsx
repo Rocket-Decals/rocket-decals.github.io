@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Poppins } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { EasterEggProvider } from '@/contexts/EasterEggContext';
+import { ChatBot } from '@/components/chat/ChatBot';
 import './globals.css';
 import '../styles/easter-egg-animations.css';
 
@@ -89,6 +90,7 @@ export default function RootLayout({
         <LanguageProvider>
           <EasterEggProvider>
             {children}
+            <ChatBot />
           </EasterEggProvider>
         </LanguageProvider>
       </body>
