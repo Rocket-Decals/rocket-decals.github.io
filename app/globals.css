@@ -3297,8 +3297,8 @@ body.easter-egg-open {
 /* ========== Chatbot (couleurs alignées sur le site) ========== */
 .chat-bubble {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    right: calc(24px + env(safe-area-inset-right));
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -3327,13 +3327,14 @@ body.easter-egg-open {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 0 24px 90px 24px;
+    padding: 0 calc(24px + env(safe-area-inset-right)) calc(90px + env(safe-area-inset-bottom)) calc(24px + env(safe-area-inset-left));
 }
 .chat-panel {
     width: 380px;
     max-width: calc(100vw - 48px);
     height: 480px;
     max-height: calc(100vh - 120px);
+    max-height: calc(100dvh - 120px);
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -3516,4 +3517,38 @@ body.easter-egg-open {
 .chat-send:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile: bottom-sheet (clavier + safe-areas) */
+@media (max-width: 520px) {
+    .chat-overlay {
+        /* garde le format \"panneau\" au lieu du plein écran */
+        padding: 12px calc(12px + env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left));
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .chat-panel {
+        width: 100%;
+        max-width: 100%;
+        /* hauteur max pour ne pas cacher la page, mais reste safe avec le clavier */
+        height: min(520px, calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)));
+        max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        border-radius: 16px;
+    }
+    .chat-panel-header {
+        padding-top: calc(14px + env(safe-area-inset-top));
+    }
+    .chat-messages {
+        padding: 14px;
+    }
+    .chat-form {
+        padding: 12px 12px calc(12px + env(safe-area-inset-bottom)) 12px;
+    }
+    .chat-input {
+        font-size: 16px; /* évite le zoom iOS */
+    }
+    .chat-send {
+        width: 48px;
+        height: 48px;
+    }
 }
