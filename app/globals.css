@@ -3519,21 +3519,22 @@ body.easter-egg-open {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Mobile: bottom-sheet (clavier + safe-areas) */
+/* Mobile: panneau plein hauteur (plus fiable avec le clavier mobile) */
 @media (max-width: 520px) {
     .chat-overlay {
-        /* garde le format \"panneau\" au lieu du plein écran */
-        padding: 12px calc(12px + env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left));
-        align-items: flex-end;
-        justify-content: flex-end;
+        padding: 0;
+        align-items: stretch;
+        justify-content: stretch;
     }
     .chat-panel {
         width: 100%;
         max-width: 100%;
-        /* hauteur max pour ne pas cacher la page, mais reste safe avec le clavier */
-        height: min(520px, calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)));
-        max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-        border-radius: 16px;
+        /* plein écran pour éviter que le clavier coupe le formulaire */
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100vh;
+        max-height: 100dvh;
+        border-radius: 0;
     }
     .chat-panel-header {
         padding-top: calc(14px + env(safe-area-inset-top));
