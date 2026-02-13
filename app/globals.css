@@ -3486,6 +3486,7 @@ body.easter-egg-open {
 }
 .chat-input {
     flex: 1;
+    min-width: 0; /* permet à l'input de rétrécir en flex, évite que le bouton soit poussé hors écran sur mobile */
     padding: 12px 14px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
