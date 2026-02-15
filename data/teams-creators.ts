@@ -52,6 +52,7 @@ export const teamsCreators: TeamCreatorDecal[] = [
       }
     ],
   },
+  /**
   {
     id: 'horizon-esport-2026',
     new: true,
@@ -110,6 +111,7 @@ export const teamsCreators: TeamCreatorDecal[] = [
       },
     ],
   },
+  */
   {
     id: 'gameward-kaokor',
     new: true,
@@ -155,6 +157,7 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'france-2025',
+    new: true,
     keywords: [
       'france',
       '2025',
