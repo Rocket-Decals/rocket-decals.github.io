@@ -57,11 +57,11 @@ export default function ContactSection() {
         <div id="erlow-card-trigger" className="team-card">
           <div className="team-banner">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/rd/erlow_banner.jpg" alt="Erlow Banner" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/img/rd/erlow_banner_new.jpg" alt="Erlow Banner" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div className="team-logo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/rd/erlow-logo.jpg" alt="Erlow Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/img/rd/erlow-logo-new.jpg" alt="Erlow Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div className="team-info">
             <h3 className="team-name">Erlow</h3>
