@@ -2,10 +2,18 @@
 import { ClientDecal } from '@/types';
 
 export const clients: ClientDecal[] = [
-  
+  {
+    id: 'legende',
+    new: true,
+    title: {
+      fr: 'Legende',
+      en: 'Legende',
+    },
+    keywords: ['legende', 'rocket league', 'stickers', 'custom', 'decal'],
+    images: ['/img/decals/legende/legende-1.png', '/img/decals/legende/legende-2.png', '/img/decals/legende/legende-3.png'],
+  },
   {
     id: 'fanaticrr',
-    new: true,
     title: {
       fr: 'FanaticRR',
       en: 'FanaticRR',
@@ -15,7 +23,6 @@ export const clients: ClientDecal[] = [
   },
   {
     id: 'vix',
-    new: true,
     title: {
       fr: 'Vix',
       en: 'Vix',
@@ -25,7 +32,6 @@ export const clients: ClientDecal[] = [
   },
   {
     id: 'sano',
-    new: true,
     title: {
       fr: 'Sano',
       en: 'Sano',
