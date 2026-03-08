@@ -3,6 +3,17 @@ import { Review } from '@/types';
 
 export const reviews: Review[] = [
   {
+    id: 'phil8-review',
+    user: {
+      name: 'Phil8',
+      firstLetter: 'P',
+    },
+    text: {
+      fr: 'Raito est est un excellent graphiste : imaginatif, à l’écoute et très respectueux. Je le recommande à toute personne souhaitant réaliser un décal personnalisé de qualité, même avec un petit budget.',
+      en: 'Raito is an excellent graphic designer: imaginative, attentive and very respectful. I recommend him to anyone wishing to realize a personalized decal of quality, even with a small budget.',
+    },
+  },
+  {
     id: 'noblaze-review',
     user: {
       name: '10noblaze',

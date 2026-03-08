@@ -3,6 +3,56 @@ import { TeamCreatorDecal } from '@/types';
 
 export const teamsCreators: TeamCreatorDecal[] = [
   {
+    id: 'erlow-raito',
+    new: true,
+    keywords: [
+      'erlow',
+      'raito',
+      'erlow-raito',
+      'rocket league',
+      'league',
+      'team',
+      'esport',
+      'equipe',
+    ],
+    sketchfab: {
+      title: 'Erlow & Raito',
+      src: 'https://sketchfab.com/models/179d3b7759494e778a0cffbcf0932d75/embed',
+      allow: 'fullscreen; xr-spatial-tracking',
+      autostart: false,
+    },
+    title: {
+      fr: 'Erlow & Raito',
+      en: 'Erlow & Raito',
+    },
+    paragraphs: [
+      {
+        fr: `Un sticker spécialement conçu pour Erlow et Raito, fondateurs de Rocket Decals.`,
+        en: `A sticker specially designed for Erlow and Raito, founders of Rocket Decals.`,
+      },
+      {
+        fr: `Prenez part à la compétition en téléchargeant ce sticker via les boutons ci-dessous !`,
+        en: `Join the competition by downloading this decal through the buttons below!`,
+      },
+    ],
+    downloads: [
+      {
+        href: '/decals/erlow-raito/RocketDecals_FEN_26.rar',
+        label: {
+          fr: 'Télécharger pour Fennec',
+          en: 'Download for Fennec',
+        },
+      },
+      {
+        href: '/decals/erlow-raito/RocketDecals_OCT_26.rar',
+        label: {
+          fr: 'Télécharger pour Octane',
+          en: 'Download for Octane',
+        },
+      }
+    ],
+  },
+  {
     id: 'pxr-2026',
     new: true,
     keywords: [
@@ -157,7 +207,6 @@ export const teamsCreators: TeamCreatorDecal[] = [
   },
   {
     id: 'france-2025',
-    new: true,
     keywords: [
       'france',
       '2025',
